@@ -21,10 +21,10 @@ public class Queen extends Figure {
 
     @Override
     public boolean canMove(int toY, int toX) {
-        if ((Math.abs(coordinates.getX() - toX) != 1) && (Math.abs(coordinates.getY() - toY) != 2)
+        if ((Math.abs(coordinates.getX() - toX) == 1) && (Math.abs(coordinates.getY() - toY) == 2)
                 || (Math.abs(coordinates.getX() - toX)) != 2 && (Math.abs(coordinates.getY() - toY) != 1)) {
-            return true;
-        }else
             return false;
+        }else
+            return true;
     }
 }
